@@ -4,8 +4,49 @@
 #include <iostream>
 
 int main()
+{   
+    const std::string playerName{ "Player1" };
+
+    const int maxHealth{ 100 };
+    int currentHealth{ 100 };
+
+    const float maxEnergy{ 50.0F };
+    float currentEnergy{ 50.0F };
+
+    const float dashCost{ 15.0F };
+
+    const float movementSpeed{ 620.0F };
+
+    const bool isPlayerAlive{ currentHealth > 0 };
+
+    printPlayerStats(playerName, currentHealth, currentEnergy, movementSpeed, isPlayerAlive);
+
+    return 0;
+}
+
+float calculateDamage(const float baseDamage, const float armor)
 {
-    std::cout << "Hello World!\n";
+    const float finalDamage{ baseDamage - armor * 0.2F };
+    return finalDamage > 0.0F ? finalDamage : 0.0F;
+}
+
+
+
+void printPlayerStats(const std::string playerName, const float currentHealth, const float currentEnergy, 
+    const float movementSpeed, const bool isPlayerAlive)
+{
+    printSeparator();
+    std::cout << "Player Name is " << playerName << "\n";
+    std::cout << "Health: " << currentHealth << "\n";
+    std::cout << "Energy: " << currentEnergy << "\n";
+    std::cout << "Movement Speed: " << movementSpeed << "\n";
+    std::cout << "Alive: " << std::boolalpha << isPlayerAlive << "\n\n\n";
+    printSeparator();
+}
+
+void printSeparator()
+{
+    std::cout << "------------------------------\n\n\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
