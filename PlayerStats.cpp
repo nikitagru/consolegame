@@ -21,13 +21,18 @@ void PlayerStats::applyDamage(float damage)
     }
 }
 
-bool PlayerStats::tryUseDash(float energyCost)
+void PlayerStats::tryUseDash(float energyCost)
 {
     if (isAlive() && (getCurrentEnergy() > energyCost))
     {
         currentEnergy -= energyCost;
         std::cout << "Player use dash";
     }
+}
+
+std::string PlayerStats::getName()
+{
+    return name;
 }
 
 float PlayerStats::getCurrentHealth()

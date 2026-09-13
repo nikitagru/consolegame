@@ -130,15 +130,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleGame.cpp" />
+    <ClCompile Include="DamageType.cpp" />
     <ClCompile Include="PlayerStats.cpp" />
     <ClCompile Include="PlayerStats.h" />
-    <ClCompile Include="WeaponStats.cpp" />
+    <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="WeaponType.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

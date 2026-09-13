@@ -8,4 +8,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(rift_runner
     ConsoleGame.cpp
+    PlayerStats.cpp
+    Weapon.cpp
+    WeaponType.cpp
+    DamageType.cpp
 )

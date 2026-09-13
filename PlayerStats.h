@@ -8,8 +8,9 @@ public:
     PlayerStats(std::string name, float maxHealth, float maxEnergy);
 
     void applyDamage(float damage);
-    bool tryUseDash(float energyCost);
+    void tryUseDash(float energyCost);
 
+    std::string getName();
     float getCurrentHealth();
     float getMaxHealth() const;
     float getCurrentEnergy();
